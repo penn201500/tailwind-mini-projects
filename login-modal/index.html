@@ -6,8 +6,128 @@
             name="viewport"
             content="width=device-width, initial-scale=1.0" />
         <title>Login Modal</title>
+        <script src="https://cdn.tailwindcss.com"></script>
     </head>
     <body>
-        <h1>hello</h1>
+        <!-- global container -->
+        <div class="flex items-center justify-center min-h-screen bg-rose-50">
+            <!-- card container -->
+            <div
+                class="relative flex flex-col m-6 space-y-10 bg-white shadow-2xl rounded-2xl md:flex-row md:space-y-0 md:m-0">
+                <!-- left side -->
+                <div class="p-6 md:p-20">
+                    <!-- top content -->
+                    <h2 class="font-mono text-4xl mb-5 font-bold">Log In</h2>
+                    <p class="max-w-sm mb-12 font-sans font-light text-gray-600">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam eos, delectus
+                        placeat nisi tenetur exercitationem.
+                    </p>
+                    <input
+                        type="text"
+                        class="w-full p-6 broder border-gray-300 rounded-md placeholder:font-sans placeholder:font-light"
+                        placeholder="Enter your email address" />
+
+                    <!-- middle content -->
+                    <div
+                        class="flex flex-col items-center justify-between mt-6 space-y-6 md:flex-row md:space-y-0">
+                        <div class="font-thin text-cyan-700">Forgot password</div>
+                        <button
+                            class="w-full md:w-auto flex items-center justify-center p-6 space-x-4 font-sans font-bold text-white rounded-md shadow-md px-9 bg-cyan-700 shadow-cyan-100 hover:bg-opacity-90 hover:shadow-lg border transition hover:translate-x-2 duration-150">
+                            <span>Next</span>
+                            <svg
+                                fill="#e4e4e4"
+                                class="w-6"
+                                version="1.1"
+                                id="Layer_1"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                viewBox="0 0 512 512"
+                                xml:space="preserve">
+                                <g
+                                    id="SVGRepo_bgCarrier"
+                                    stroke-width="0"></g>
+                                <g
+                                    id="SVGRepo_tracerCarrier"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <g>
+                                        <g>
+                                            <path
+                                                d="M256,0C114.608,0,0,114.608,0,256s114.608,256,256,256s256-114.608,256-256S397.392,0,256,0z M256,496 C123.664,496,16,388.336,16,256S123.664,16,256,16s240,107.664,240,240S388.336,496,256,496z"></path>
+                                        </g>
+                                    </g>
+                                    <g>
+                                        <g>
+                                            <polygon
+                                                points="368.992,247.856 368.992,247.648 368.784,247.648 271.264,150.128 259.952,161.44 346.16,247.648 121.52,247.648 121.52,263.648 347.904,263.648 259.952,351.6 271.264,362.912 377.664,256.528 "></polygon>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+                    <!-- border -->
+                    <div class="mt-12 border-b border-b-gray-300"></div>
+                    <!-- bottom content -->
+                    <p class="py-6 text-sm font-thin text-cent text-gray-400">or log in with</p>
+                    <!-- bottom buttons container -->
+                    <div
+                        class="flex flex-col space-x-0 space-y-6 md:flex-row md:space-x-4 md:space-y-0">
+                        <button
+                            class="flex items-center justify-center py-2 space-x-3 border border-gray-400 rounded-md shadow-sm hover:shadow-lg hover:-translate-y-1 transition duration-150 md:w-1/2">
+                            <img
+                                src="images/facebook.png"
+                                alt=""
+                                class="w-9" />
+                            <span class="font-thin">Facebook</span>
+                        </button>
+                        <button
+                            class="flex items-center justify-center py-2 space-x-3 border border-gray-400 rounded-md shadow-sm hover:shadow-lg hover:-translate-y-1 transition duration-150 md:w-1/2">
+                            <img
+                                src="images/google.png"
+                                alt=""
+                                class="w-9" />
+                            <span class="font-thin">Google</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- right side -->
+                <img
+                    src="images/image.jpg"
+                    alt=""
+                    class="w-[430px] hidden md:block" />
+
+                <!-- close button -->
+                <div
+                    class="group absolute -top-5 right-4 md:top-4 hover:cursor-pointer hover:-translate-y-0.5 transition duration-150">
+                    <svg
+                        class="w-6 md:bg-white rounded-full"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        stroke="#1C274C">
+                        <g
+                            id="SVGRepo_bgCarrier"
+                            stroke-width="0"></g>
+                        <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                d="M10.0303 8.96965C9.73741 8.67676 9.26253 8.67676 8.96964 8.96965C8.67675 9.26255 8.67675 9.73742 8.96964 10.0303L10.9393 12L8.96966 13.9697C8.67677 14.2625 8.67677 14.7374 8.96966 15.0303C9.26255 15.3232 9.73743 15.3232 10.0303 15.0303L12 13.0607L13.9696 15.0303C14.2625 15.3232 14.7374 15.3232 15.0303 15.0303C15.3232 14.7374 15.3232 14.2625 15.0303 13.9696L13.0606 12L15.0303 10.0303C15.3232 9.73744 15.3232 9.26257 15.0303 8.96968C14.7374 8.67678 14.2625 8.67678 13.9696 8.96968L12 10.9393L10.0303 8.96965Z"
+                                fill="#28c840"></path>
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M12 1.25C6.06294 1.25 1.25 6.06294 1.25 12C1.25 17.9371 6.06294 22.75 12 22.75C17.9371 22.75 22.75 17.9371 22.75 12C22.75 6.06294 17.9371 1.25 12 1.25ZM2.75 12C2.75 6.89137 6.89137 2.75 12 2.75C17.1086 2.75 21.25 6.89137 21.25 12C21.25 17.1086 17.1086 21.25 12 21.25C6.89137 21.25 2.75 17.1086 2.75 12Z"
+                                fill="#28c840"></path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
